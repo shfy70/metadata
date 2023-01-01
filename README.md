@@ -5,3 +5,6 @@ This folder is mainly test YAML for two purposes.
 
 
 I will create multiple folders to do different ype of tests
+
+
+Note on the local Windows bastion host, it is located at E:\github

@@ -1,0 +1,5 @@
+# Compress /home/shoufeng/* into a single file
+---
+  - hosts: all
+    tasks:
+      action: ls -l /home/shoufeng

@@ -1,0 +1,14 @@
+# check-status.yml, this is to check all webserver, lb and if it returns with 0, it is all good!
+---
+  - hosts: test:loadbalancers
+    become: true
+    tasks:
+      - name: Check status of apache
+        command: service httpd status
+        args:
+          warn: no
+        changed_when: false
+
+      - name: This is not failure
+        command: /bin/false
+        ignore_errors: yes

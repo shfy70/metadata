@@ -1,0 +1,11 @@
+# Copy php to web server test1/test2
+
+---
+  - hosts: test
+    become: true
+    roles:
+      - test
+      
+
+
+            

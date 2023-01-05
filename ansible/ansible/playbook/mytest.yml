@@ -1,0 +1,9 @@
+# yum install curl, then disabled firewall
+---
+  - hosts: test
+    become: true
+    tasks:
+      - name: Installing curl
+        yum: name=curl state=present
+      - name: disable firewall
+        service: name=firewalld state=stopped enabled=yes

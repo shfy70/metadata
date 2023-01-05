@@ -1,0 +1,6 @@
+# uname.yml
+---
+  - hosts: manager:workers
+    tasks:
+      - name: Get OS Type
+        shell: uname

@@ -1,0 +1,13 @@
+# yum install httpd
+
+---
+  - hosts: test
+    become: true
+    tasks:
+      - name: Installing apache and php
+        yum: name=httpd state=present
+      - name: Ensure apache starts
+        service: name=httpd state=started enabled=yes
+
+
+  

@@ -1,0 +1,27 @@
+---
+# task files copied from ansible folder's setup-app.yml
+- name: Upload application files
+  copy:
+    src: ../files/index.html
+    dest: "{{ path_to_app }}"
+    mode: 0755
+
+- name: Creatte simple info page
+  copy:
+    dest: "{{ path_to_app }}/info.php"
+    content: "<h1> Info about webserver {{ ansible_hostname }} </h1>"
+
+- name: Fuck Biden Whitehouse
+  command: ls -la {{ path_to_app }}
+  register: dir_contents
+
+- name: Debug directory dir_contents
+  debug:
+    msg: "{{ dir_contents }}"
+
+- name: Configure php.ini file
+  lineinfile:
+    path: /etc/php.ini
+    regexp: ^short_open_tag
+    line: 'short_open_tag=On'
+  notify: restart apache

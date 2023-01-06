@@ -9,5 +9,4 @@ I will create multiple folders to do different ype of tests
 
 Note on the local Windows bastion host, it is located at E:\github
 
-
-Let me delete something in the readme file!
+This is deleted, let me eat dinner

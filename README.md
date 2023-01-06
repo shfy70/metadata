@@ -9,4 +9,4 @@ I will create multiple folders to do different ype of tests
 
 Note on the local Windows bastion host, it is located at E:\github
 
-This is deleted, let me eat dinner
+6:46PM CST on Jan 5th

@@ -1,3 +1,0 @@
----
-# vars file for roles/test
-path_to_app: "/var/www/html"

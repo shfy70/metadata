@@ -1,8 +1,0 @@
-# yum install telnet
-
----
-  - hosts: test
-    become: true
-    tasks:
-      - name: Installing telnet
-        yum: name=telnet state=present

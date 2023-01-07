@@ -1,7 +1,0 @@
-# all-playbooks.yml to combined all previous work into single yml file,note it won't impact as everything already built,it'd cool if nothing is built yet
----
-  - import_playbook: yum.yml
-  - import_playbook: install-svc.yml
-  - import_playbook: setup-app.yml
-  - import_playbook: setup-lb.yml
-  - import_playbook: check-status.yml

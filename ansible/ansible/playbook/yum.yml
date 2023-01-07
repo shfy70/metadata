@@ -1,8 +1,0 @@
-# yum update
-
----
-  - hosts: test
-    become: true
-    tasks:
-      - name: Update yum packages
-        yum: name=* state=latest

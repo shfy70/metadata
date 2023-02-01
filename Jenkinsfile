@@ -1,0 +1,1 @@
+echo "This prove that Jenkins Github integration is working!"

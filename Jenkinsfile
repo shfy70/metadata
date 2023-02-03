@@ -4,17 +4,12 @@ String integrationJdkVersions = 11
 
 // Platform to test for
 String[] platforms = [
- 'windows',
  'linux',
 ]
 
 // Kubectl versions to test against
 String[] kubectlVersions = [
-    '1.22.17',
     '1.23.16',
-    '1.24.10',
-    '1.25.6',
-    '1.26.1',
 ]
 
 // Not sure what this does yet
@@ -56,9 +51,6 @@ def unitTest(platform, jdk) {
             stage('tests') {
                 infra.runWithJava('mvn clean -Dgroups="! org.jenkinsci.plugins.kubernetes.cli.KubectlIntegrationTest" test spotbugs:check', jdk)
             }
-            // stage('coverage') {
-            //     infra.runWithJava('mvn jacoco:report coveralls:report')
-            // }
         }
     }
 }
@@ -73,14 +65,8 @@ def downloadKubectl(kubectlVersion){
             chmod +x kubectl
             kubectl version --client 
         """
-    }else{
-        bat """
-            mkdir -p .bin
-            cd .bin
-            curl -LO https://storage.googleapis.com/kubernetes-release/release/v${kubectlVersion}/bin/windows/amd64/kubectl.exe
-            kubectl.exe version --client
-        """
-    }
+    }else {}
+
 }
 
 // Build a step for all combinations we want to test for

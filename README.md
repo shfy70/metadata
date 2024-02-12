@@ -11,4 +11,14 @@ Note on the local Windows bastion host, it is located at E:\github
 
 This is created on demo branch!
 
+<<<<<<< HEAD
 Write it again on demo branch!
+=======
+Write it again on demo branch!
+
+commit1
+
+commit2
+
+commit3
+>>>>>>> d9831f5 (commit3)

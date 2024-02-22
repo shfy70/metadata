@@ -1,7 +1,0 @@
-Delete me after this!
-
-I hate github
-
-I will now edit it, push it to github, then delete from local and push change to github!
-
-Can't delete it from local and then push to master at hub!
